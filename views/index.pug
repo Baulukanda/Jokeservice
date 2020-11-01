@@ -1,0 +1,27 @@
+html
+    head
+    body
+        h1 JOKESERVICE 3000
+        h2 Other Jokes
+        ul
+            for link in linklist                
+                li                                                         
+                    a(href=`/${link.name}`) #{link.name}             
+                
+        h2 our jokes        
+        ul
+            for joke in jokesList
+                li #{joke.setup}
+                ul
+                    li #{joke.punchline}                 
+        form(action="/api/jokes", method="post")
+            label Setup
+            br
+            input(type="text", name="setup" )
+            br
+            label Punchline
+            br
+            input(type="text", name="punchline" )
+            br
+            input(type="submit", value="submit")
+            br 

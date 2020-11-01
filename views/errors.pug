@@ -1,0 +1,7 @@
+html
+    head
+    body
+        h3 #{errorName}
+        for error in errors
+            p #{error.message}
+        a(href='/') Return to homepage
